@@ -53,7 +53,8 @@ spec:
           runAsUser: 0
           capabilities:
             drop: [ "ALL" ]
-            add:  [ "SYS_ADMIN", "SYS_RAWIO" ]
+            add:  [ "SYS_ADMIN" ] 
+            #,"SYS_RAWIO" ]
         volumeMounts:
           # for getting pod resources
         - mountPath: /var/lib/kubelet/pod-resources
