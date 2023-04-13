@@ -20,7 +20,7 @@ spec:
         app: intel-xpumanager
     spec:
       # hostNetwork should be set true for getting xelink metrics
-      hostNetwork: true
+      # hostNetwork: true
       containers:
       - name: xpumd
         image: intel/xpumanager
