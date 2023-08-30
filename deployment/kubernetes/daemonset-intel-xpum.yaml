@@ -23,8 +23,8 @@ spec:
       hostNetwork: true
       containers:
       - name: xpumd
-        image: intel/xpumanager
-        imagePullPolicy: IfNotPresent
+        image: intel/xpumanager:latest
+        imagePullPolicy: Always
         command: [ "/usr/bin/xpumd" ]
         env:
         - name: SPDLOG_LEVEL
@@ -79,8 +79,8 @@ spec:
         - name: devdri
           mountPath: /dev/dri
           readOnly: true
-        imagePullPolicy: IfNotPresent
-        image: intel/xpumanager
+        imagePullPolicy: Always
+        image: intel/xpumanager:latest
         # needs same user as "xpumd" to be able to access its socket
         securityContext:
           allowPrivilegeEscalation: false
