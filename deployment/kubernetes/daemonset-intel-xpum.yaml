@@ -23,7 +23,7 @@ spec:
       hostNetwork: true
       containers:
       - name: xpumd
-        image: intel/xpumanager:latest
+        image: intel/xpumanager:v1.2.13
         imagePullPolicy: Always
         command: [ "/usr/bin/xpumd" ]
         env:
